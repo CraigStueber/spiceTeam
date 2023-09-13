@@ -1,0 +1,35 @@
+.spacerDiv{
+    padding: 120px 0 0;
+}
+
+.kernelSeasonMobileLogo{
+    height: 100px;
+}
+.ks-mobile-div{
+    background-color: #00a9e0;
+    color: #162950;
+    font-weight: 800;
+}
+.mob-nav-bar-sh{
+    background-color: #a1c283;
+}
+.ksMobileMenuSide{
+    display: block;
+    margin: 0 auto 0;
+    height: 100px;
+}
+.sh-mobile-div{
+    background-color: #a1c283;
+    color: black;
+    font-weight: 800;
+}
+.mob-nav-bar-sauers{
+    background-color: #ad8c52;
+
+}
+.sauers-mobile-div{
+    background-color: #ad8c52;
+    color: #4b6174;
+    font-weight: 700;
+
+}
