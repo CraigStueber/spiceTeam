@@ -1,75 +1,78 @@
 {{ 'footer.styles.css' | asset_url | stylesheet_tag }}
 
 <footer>
-{% if canonical_url contains 'kernel' %}
-        <div class="kernelFooter">
-            <h1 class="text-center">
-                Kernel Season Footer
-            </h1>
-            <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/838377.jpg?v=1690984376 "
-            width="" height=""
-            class=""
-            alt=""
-            loading="lazy">
-
-        </div>
-{% elsif canonical_url contains "spicehunter"%}
-
-        <div class="spicehunterFooter">
-            <h1 class="text-center">
-                Spice Hunter Season Footer
-            </h1>
-            <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/wp11126765.jpg?v=1690984382 "
-                width="100%" height=""
-                class=""
-                alt=""
-                loading="lazy">
-        </div>
-        {% elsif canonical_url contains 'search' %}
-        <div class="basicFooter">
-            <h1 class="text-center">
-                Footer coming from Search
-            </h1>
-            <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
-                width="100%" height=""
-                class=""
-                alt=""
-                loading="lazy">
-        </div>
-        {% elsif canonical_url contains 'account' %}
-        <div class="basicFooter">
-            <h1 class="text-center">
-                Footer coming from Account
-            </h1>
-            <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
-                width="100%" height=""
-                class=""
-                alt=""
-                loading="lazy">
-        </div>
-        {% elsif canonical_url contains 'cart' %}
-        <div class="basicFooter">
-            <h1 class="text-center">
-                Footer coming from Cart
-            </h1>
-            <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
-                width="100%" height=""
-                class=""
-                alt=""
-                loading="lazy">
-        </div>
-
-    {% else %}
-    <div class="sauersFooter">
-        <h1 class="text-center">
-            Sauers Footer
-        </h1>
-        <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/2-22-11-6-7-17-29m.jpg?v=1690984387 "
-            width="100%" height=""
-            class=""
-            alt=""
-            loading="lazy">
+  {% if canonical_url contains 'kernel' %}
+    <div class="kernelFooter">
+      <h1 class="text-center">Kernel Season Footer</h1>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/838377.jpg?v=1690984376 "
+        width=""
+        height=""
+        class=""
+        alt=""
+        loading="lazy"
+      >
+    </div>
+  {% elsif canonical_url contains 'spicehunter' %}
+    <div class="spicehunterFooter">
+      <h1 class="text-center">Spice Hunter Season Footer</h1>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/wp11126765.jpg?v=1690984382 "
+        width=""
+        height=""
+        class=""
+        alt=""
+        loading="lazy"
+      >
+    </div>
+  {% elsif canonical_url contains 'search' %}
+    <div class="basicFooter">
+      <h1 class="text-center">Footer coming from Search</h1>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
+        width=""
+        height=""
+        class=""
+        alt=""
+        loading="lazy"
+      >
+    </div>
+  {% elsif canonical_url contains 'account' %}
+    <div class="basicFooter">
+      <h1 class="text-center">Footer coming from Account</h1>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
+        width=""
+        height=""
+        class=""
+        alt=""
+        loading="lazy"
+      >
+    </div>
+  {% elsif canonical_url contains 'cart' %}
+    <div class="basicFooter">
+      <h1 class="text-center">Footer coming from Cart</h1>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
+        width=""
+        height=""
+        class=""
+        alt=""
+        loading="lazy"
+      >
     </div>
 
-{% endif %}
+  {% else %}
+    <div class="sauersFooter">
+      <h1 class="text-center">Sauers Footer</h1>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/2-22-11-6-7-17-29m.jpg?v=1690984387 "
+        width=""
+        height=""
+        class=""
+        alt=""
+        loading="lazy"
+      >
+    </div>
+  {% endif %}
 </footer>

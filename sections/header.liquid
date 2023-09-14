@@ -1,763 +1,983 @@
-
-
 {{ 'header.styles.css' | asset_url | stylesheet_tag }}
 {{ 'mobileheader.styles.css' | asset_url | stylesheet_tag }}
 
 {% comment %} Mobile Header {% endcomment %}
 <div class="d-block d-lg-none">
-    <div class="spacerDiv"></div>
-    {% if canonical_url contains 'kernel' %}
+  <div class="spacerDiv"></div>
+  {% if canonical_url contains 'kernel' %}
     <nav class="navbar mob-nav-bar-ks fixed-top py-1">
       <div class="container-fluid">
-       
-        <a class="navbar-brand p-0" href="/" >
-          <img class="kernelSeasonMobileLogo " src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264" width="" height="" alt="Duke's Mayo Logo Black letters on White background" loading="lazy">
-      </a>
-                
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <a class="navbar-brand p-0" href="/">
+          <img
+            class="kernelSeasonMobileLogo "
+            src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+            width=""
+            height=""
+            alt="Duke's Mayo Logo Black letters on White background"
+            loading="lazy"
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon text-light"> </span>
         </button>
-        <div class="offcanvas offcanvas-end ks-mobile-div" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div
+          class="offcanvas offcanvas-end ks-mobile-div"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel">Kernel Season's</h5>
-            <button type="button" class="btn-close btn-close-black " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close btn-close-black "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <div class="">
                 <li class="nav-item">
-                <a href="/pages/kernel-seasons-homepage" class="nav-link  focusedLink">HOME </a>
+                  <a href="/pages/kernel-seasons-homepage" class="nav-link  focusedLink">HOME </a>
                 </li>
-                {% assign menu = linklists.kernel%}
+                {% assign menu = linklists.kernel %}
                 {% for link in menu.links %}
-                    <li class=" nav-item  ">
-                      <a href="{{ link.url }}" class="nav-link  focusedLink ">{{ link.title }}</a>
-                      {% if link.links != blank %}
-                       
-                        {% for sub_link in link.links %} 
-                          <div>
-                            <a role="menuitem" class="nav-link  px-2 focusedLink" href="{{ sub_link.url }}" aria-label="{{sub_link.title}}">{{ sub_link.title }}</a>
-                          </div>
-                        {% endfor %}
-                     
-                   
-                      {% endif %}
-                      
-                    </li>
+                  <li class=" nav-item  ">
+                    <a href="{{ link.url }}" class="nav-link  focusedLink ">{{ link.title }}</a>
+                    {% if link.links != blank %}
+                      {% for sub_link in link.links %}
+                        <div>
+                          <a
+                            role="menuitem"
+                            class="nav-link  px-2 focusedLink"
+                            href="{{ sub_link.url }}"
+                            aria-label="{{sub_link.title}}"
+                          >
+                            {{- sub_link.title -}}
+                          </a>
+                        </div>
+                      {% endfor %}
+                    {% endif %}
+                  </li>
                 {% endfor %}
               </div>
               <div class="row text-center my-2">
                 <div class="col-4 text-center">
-              <a href="/search" style="color: black"> {% render 'icon-search'%} </a>
+                  <a href="/search" style="color: black"> {% render 'icon-search' %} </a>
                 </div>
                 <div class="col-4 text-center">
-               <a href="/account"  style="color: black"> {% render 'icon-account'%} </a>
-            </div>
-            <div class="col-4 text-center">
-                <a href="/cart"  style="color: black">{% render 'icon-shoppingbag'%}</a>
-            </div>
+                  <a href="/account" style="color: black"> {% render 'icon-account' %} </a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="/cart" style="color: black">{% render 'icon-shoppingbag' %}</a>
+                </div>
               </div>
               <div class="row my-3">
-                <h5 class="text-center">
-                    Our Other Brands
-                </h5>
+                <h5 class="text-center">Our Other Brands</h5>
                 <div class="col-6 py-3">
-                    <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                        width="" height=""
-                        alt="Sauer's Logo"
-                        class="mobileLogoMenu"
-                        loading="lazy"></a>
-                    
-    
-                   
-    
+                  <a href="/"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                      width=""
+                      height=""
+                      alt="Sauer's Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
                 </div>
                 <div class="col-6">
-                    <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                        width="" height=""
-                        alt="The Spice Hunter Logo"
-                        class="mobileLogoMenu"
-                        loading="lazy"></a>
+                  <a href="/pages/spicehuntertest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                      width=""
+                      height=""
+                      alt="The Spice Hunter Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
                 </div>
-            </div>
-             
+              </div>
             </ul>
-         
           </div>
         </div>
-        
       </div>
     </nav>
-    {% elsif canonical_url contains 'spicehunter' %}
+  {% elsif canonical_url contains 'spicehunter' %}
     <nav class="navbar mob-nav-bar-sh fixed-top py-1">
-        <div class="container-fluid">
-         
-          <a class="navbar-brand p-0" href="/" >
-            <img class="kernelSeasonMobileLogo " src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276" width="" height="" alt="Duke's Mayo Logo Black letters on White background" loading="lazy">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="/">
+          <img
+            class="kernelSeasonMobileLogo "
+            src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+            width=""
+            height=""
+            alt="Duke's Mayo Logo Black letters on White background"
+            loading="lazy"
+          >
         </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"> </span>
-          </button>
-          <div class="offcanvas offcanvas-end sh-mobile-div" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel">The Spice Hunter</h5>
-              <button type="button" class="btn-close btn-close-black " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <div class="">
-                  <li class="nav-item">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-light"> </span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end sh-mobile-div"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel">The Spice Hunter</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-black "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="">
+                <li class="nav-item">
                   <a href="/pages/spicehuntertest" class="nav-link  focusedLink">HOME </a>
+                </li>
+                {% assign menu = linklists.spicehunter %}
+                {% for link in menu.links %}
+                  <li class=" nav-item  ">
+                    <a href="{{ link.url }}" class="nav-link  focusedLink ">{{ link.title }}</a>
+                    {% if link.links != blank %}
+                      {% for sub_link in link.links %}
+                        <div>
+                          <a
+                            role="menuitem"
+                            class="nav-link  px-2 focusedLink"
+                            href="{{ sub_link.url }}"
+                            aria-label="{{sub_link.title}}"
+                          >
+                            {{- sub_link.title -}}
+                          </a>
+                        </div>
+                      {% endfor %}
+                    {% endif %}
                   </li>
-                  {% assign menu = linklists.spicehunter%}
-                  {% for link in menu.links %}
-                      <li class=" nav-item  ">
-                        <a href="{{ link.url }}" class="nav-link  focusedLink ">{{ link.title }}</a>
-                        {% if link.links != blank %}
-                         
-                          {% for sub_link in link.links %} 
-                            <div>
-                              <a role="menuitem" class="nav-link  px-2 focusedLink" href="{{ sub_link.url }}" aria-label="{{sub_link.title}}">{{ sub_link.title }}</a>
-                            </div>
-                          {% endfor %}
-                       
-                     
-                        {% endif %}
-                        
-                      </li>
-                  {% endfor %}
-                </div>
-                <div class="row text-center my-2">
-                    <div class="col-4 text-center">
-                  <a href="/search" style="color: black"> {% render 'icon-search'%} </a>
-                    </div>
-                    <div class="col-4 text-center">
-                   <a href="/account"  style="color: black"> {% render 'icon-account'%} </a>
+                {% endfor %}
+              </div>
+              <div class="row text-center my-2">
+                <div class="col-4 text-center">
+                  <a href="/search" style="color: black"> {% render 'icon-search' %} </a>
                 </div>
                 <div class="col-4 text-center">
-                    <a href="/cart"  style="color: black">{% render 'icon-shoppingbag'%}</a>
-                </div>
-                  </div>
-                <div class="row my-3">
-                  <h5 class="text-center">
-                      Our Other Brands
-                  </h5>
-                  <div class="col-6 py-3">
-                      <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                          width="" height=""
-                          alt="Sauer's Logo"
-                          class="mobileLogoMenu"
-                          loading="lazy"></a>
-                      
-      
-                     
-      
-                  </div>
-                  <div class="col-6">
-                    <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                        width="" height=""
-                        alt="Kernel Season's Logo"
-                        class="ksMobileMenuSide"
-                        loading="lazy"></a>
-                  </div>
-              </div>
-               
-              </ul>
-           
-            </div>
-          </div>
-          
-        </div>
-      </nav>
-      {% elsif canonical_url contains 'search' %}
-      <nav class="navbar fixed-top py-1">
-        <div class="container-fluid">
-         
-          <a class="navbar-brand p-0" href="/" >
-            <img class="kernelSeasonMobileLogo " src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauerBrands_Logo_SM_2c_RGB_256x256_crop_center_a7539655-495b-4917-8585-0bc491b043fe.png?v=1640030509" loading="lazy">
-        </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"> </span>
-          </button>
-          <div class="offcanvas offcanvas-end sh-mobile-div" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel"></h5>
-              <button type="button" class="btn-close btn-close-black " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                
-                <div class="row text-center my-2">
-                    <div class="col-4 text-center">
-                  <a href="/search" style="color: black"> {% render 'icon-search'%} </a>
-                    </div>
-                    <div class="col-4 text-center">
-                   <a href="/account"  style="color: black"> {% render 'icon-account'%} </a>
+                  <a href="/account" style="color: black"> {% render 'icon-account' %} </a>
                 </div>
                 <div class="col-4 text-center">
-                    <a href="/cart"  style="color: black">{% render 'icon-shoppingbag'%}</a>
+                  <a href="/cart" style="color: black">{% render 'icon-shoppingbag' %}</a>
                 </div>
-                  </div>
-                <div class="row my-3">
-                  <h5 class="text-center">
-                      Our  Brands
-                  </h5>
-                  <div class="col-12 py-3 text-center">
-                      <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                          width="" height=""
-                          alt="Sauer's Logo"
-                          class="mobileLogoMenu"
-                          loading="lazy"></a>
-                          <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                            width="" height=""
-                            alt="The Spice Hunter Logo"
-                            class=""
-                            loading="lazy"></a>
-      
-                     
-      
-                  </div>
-                  <div class="col-12 text-center">
-                    <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                        width="" height=""
-                        alt="Kernel Season's Logo"
-                        class=""
-                        loading="lazy"></a>
-                  </div>
               </div>
-               
-              </ul>
-           
-            </div>
+              <div class="row my-3">
+                <h5 class="text-center">Our Other Brands</h5>
+                <div class="col-6 py-3">
+                  <a href="/"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                      width=""
+                      height=""
+                      alt="Sauer's Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
+                </div>
+                <div class="col-6">
+                  <a href="/pages/kernelseasonstest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                      width=""
+                      height=""
+                      alt="Kernel Season's Logo"
+                      class="ksMobileMenuSide"
+                      loading="lazy"
+                  ></a>
+                </div>
+              </div>
+            </ul>
           </div>
-          
         </div>
-      </nav>
-      {% elsif canonical_url contains 'cart' %}
-      <nav class="navbar fixed-top py-1">
-        <div class="container-fluid">
-         
-          <a class="navbar-brand p-0" href="/" >
-            <img class="kernelSeasonMobileLogo " src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauerBrands_Logo_SM_2c_RGB_256x256_crop_center_a7539655-495b-4917-8585-0bc491b043fe.png?v=1640030509" loading="lazy">
+      </div>
+    </nav>
+  {% elsif canonical_url contains 'search' %}
+    <nav class="navbar fixed-top py-1">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="/">
+          <img
+            class="kernelSeasonMobileLogo "
+            src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauerBrands_Logo_SM_2c_RGB_256x256_crop_center_a7539655-495b-4917-8585-0bc491b043fe.png?v=1640030509"
+            loading="lazy"
+            width=""
+            height=""
+          >
         </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"> </span>
-          </button>
-          <div class="offcanvas offcanvas-end sh-mobile-div" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel"></h5>
-              <button type="button" class="btn-close btn-close-black " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                
-                <div class="row text-center my-2">
-                    <div class="col-4 text-center">
-                  <a href="/search" style="color: black"> {% render 'icon-search'%} </a>
-                    </div>
-                    <div class="col-4 text-center">
-                   <a href="/account"  style="color: black"> {% render 'icon-account'%} </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-light"> </span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end sh-mobile-div"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel"></h5>
+            <button
+              type="button"
+              class="btn-close btn-close-black "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="row text-center my-2">
+                <div class="col-4 text-center">
+                  <a href="/search" style="color: black"> {% render 'icon-search' %} </a>
                 </div>
                 <div class="col-4 text-center">
-                    <a href="/cart"  style="color: black">{% render 'icon-shoppingbag'%}</a>
-                </div>
-                  </div>
-                <div class="row my-3">
-                  <h5 class="text-center">
-                      Our  Brands
-                  </h5>
-                  <div class="col-12 py-3 text-center">
-                      <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                          width="" height=""
-                          alt="Sauer's Logo"
-                          class="mobileLogoMenu"
-                          loading="lazy"></a>
-                          <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                            width="" height=""
-                            alt="The Spice Hunter Logo"
-                            class=""
-                            loading="lazy"></a>
-      
-                     
-      
-                  </div>
-                  <div class="col-12 text-center">
-                    <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                        width="" height=""
-                        alt="Kernel Season's Logo"
-                        class=""
-                        loading="lazy"></a>
-                  </div>
-              </div>
-               
-              </ul>
-           
-            </div>
-          </div>
-          
-        </div>
-      </nav>
-      {% elsif canonical_url contains 'account' %}
-      <nav class="navbar fixed-top py-1">
-        <div class="container-fluid">
-         
-          <a class="navbar-brand p-0" href="/" >
-            <img class="kernelSeasonMobileLogo " src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauerBrands_Logo_SM_2c_RGB_256x256_crop_center_a7539655-495b-4917-8585-0bc491b043fe.png?v=1640030509" loading="lazy">
-        </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"> </span>
-          </button>
-          <div class="offcanvas offcanvas-end sh-mobile-div" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel"></h5>
-              <button type="button" class="btn-close btn-close-black " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                
-                <div class="row text-center my-2">
-                    <div class="col-4 text-center">
-                  <a href="/search" style="color: black"> {% render 'icon-search'%} </a>
-                    </div>
-                    <div class="col-4 text-center">
-                   <a href="/account"  style="color: black"> {% render 'icon-account'%} </a>
+                  <a href="/account" style="color: black"> {% render 'icon-account' %} </a>
                 </div>
                 <div class="col-4 text-center">
-                    <a href="/cart"  style="color: black">{% render 'icon-shoppingbag'%}</a>
+                  <a href="/cart" style="color: black">{% render 'icon-shoppingbag' %}</a>
                 </div>
-                  </div>
-                <div class="row my-3">
-                  <h5 class="text-center">
-                      Our  Brands
-                  </h5>
-                  <div class="col-12 py-3 text-center">
-                      <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                          width="" height=""
-                          alt="Sauer's Logo"
-                          class="mobileLogoMenu"
-                          loading="lazy"></a>
-                          <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                            width="" height=""
-                            alt="The Spice Hunter Logo"
-                            class=""
-                            loading="lazy"></a>
-      
-                     
-      
-                  </div>
-                  <div class="col-12 text-center">
-                    <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                        width="" height=""
-                        alt="Kernel Season's Logo"
-                        class=""
-                        loading="lazy"></a>
-                  </div>
               </div>
-               
-              </ul>
-           
-            </div>
+              <div class="row my-3">
+                <h5 class="text-center">Our Brands</h5>
+                <div class="col-12 py-3 text-center">
+                  <a href="/"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                      width=""
+                      height=""
+                      alt="Sauer's Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
+                  <a href="/pages/spicehuntertest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                      width=""
+                      height=""
+                      alt="The Spice Hunter Logo"
+                      class=""
+                      loading="lazy"
+                  ></a>
+                </div>
+                <div class="col-12 text-center">
+                  <a href="/pages/kernelseasonstest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                      width=""
+                      height=""
+                      alt="Kernel Season's Logo"
+                      class=""
+                      loading="lazy"
+                  ></a>
+                </div>
+              </div>
+            </ul>
           </div>
-          
         </div>
-      </nav>
-      {% else %}
-      <nav class="navbar mob-nav-bar-sauers fixed-top py-1">
-        <div class="container-fluid">
-         
-          <a class="navbar-brand p-0" href="/" >
-            <img class="kernelSeasonMobileLogo " src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674" width="" height="" alt="Duke's Mayo Logo Black letters on White background" loading="lazy">
+      </div>
+    </nav>
+  {% elsif canonical_url contains 'cart' %}
+    <nav class="navbar fixed-top py-1">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="/">
+          <img
+            class="kernelSeasonMobileLogo "
+            src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauerBrands_Logo_SM_2c_RGB_256x256_crop_center_a7539655-495b-4917-8585-0bc491b043fe.png?v=1640030509"
+            loading="lazy"
+            width=""
+            height=""
+          >
         </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"> </span>
-          </button>
-          <div class="offcanvas offcanvas-end sauers-mobile-div" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel">Sauer's</h5>
-              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <div class="">
-                  <li class="nav-item">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-light"> </span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end sh-mobile-div"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel"></h5>
+            <button
+              type="button"
+              class="btn-close btn-close-black "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="row text-center my-2">
+                <div class="col-4 text-center">
+                  <a href="/search" style="color: black"> {% render 'icon-search' %} </a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="/account" style="color: black"> {% render 'icon-account' %} </a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="/cart" style="color: black">{% render 'icon-shoppingbag' %}</a>
+                </div>
+              </div>
+              <div class="row my-3">
+                <h5 class="text-center">Our Brands</h5>
+                <div class="col-12 py-3 text-center">
+                  <a href="/"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                      width=""
+                      height=""
+                      alt="Sauer's Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
+                  <a href="/pages/spicehuntertest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                      width=""
+                      height=""
+                      alt="The Spice Hunter Logo"
+                      class=""
+                      loading="lazy"
+                  ></a>
+                </div>
+                <div class="col-12 text-center">
+                  <a href="/pages/kernelseasonstest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                      width=""
+                      height=""
+                      alt="Kernel Season's Logo"
+                      class=""
+                      loading="lazy"
+                  ></a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  {% elsif canonical_url contains 'account' %}
+    <nav class="navbar fixed-top py-1">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="/">
+          <img
+            class="kernelSeasonMobileLogo "
+            src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauerBrands_Logo_SM_2c_RGB_256x256_crop_center_a7539655-495b-4917-8585-0bc491b043fe.png?v=1640030509"
+            loading="lazy"
+            width=""
+            height=""
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-light"> </span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end sh-mobile-div"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel"></h5>
+            <button
+              type="button"
+              class="btn-close btn-close-black "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="row text-center my-2">
+                <div class="col-4 text-center">
+                  <a href="/search" style="color: black"> {% render 'icon-search' %} </a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="/account" style="color: black"> {% render 'icon-account' %} </a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="/cart" style="color: black">{% render 'icon-shoppingbag' %}</a>
+                </div>
+              </div>
+              <div class="row my-3">
+                <h5 class="text-center">Our Brands</h5>
+                <div class="col-12 py-3 text-center">
+                  <a href="/"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                      width=""
+                      height=""
+                      alt="Sauer's Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
+                  <a href="/pages/spicehuntertest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                      width=""
+                      height=""
+                      alt="The Spice Hunter Logo"
+                      class=""
+                      loading="lazy"
+                  ></a>
+                </div>
+                <div class="col-12 text-center">
+                  <a href="/pages/kernelseasonstest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                      width=""
+                      height=""
+                      alt="Kernel Season's Logo"
+                      class=""
+                      loading="lazy"
+                  ></a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  {% else %}
+    <nav class="navbar mob-nav-bar-sauers fixed-top py-1">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="/">
+          <img
+            class="kernelSeasonMobileLogo "
+            src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+            width=""
+            height=""
+            alt="Duke's Mayo Logo Black letters on White background"
+            loading="lazy"
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-light"> </span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end sauers-mobile-div"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title  fs-1" id="offcanvasDarkNavbarLabel">Sauer's</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white "
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="">
+                <li class="nav-item">
                   <a href="/" class="nav-link  focusedLink">HOME </a>
+                </li>
+                {% assign menu = linklists.sauers %}
+                {% for link in menu.links %}
+                  <li class=" nav-item  ">
+                    <a href="{{ link.url }}" class="nav-link  focusedLink ">{{ link.title }}</a>
+                    {% if link.links != blank %}
+                      {% for sub_link in link.links %}
+                        <div>
+                          <a
+                            role="menuitem"
+                            class="nav-link  px-2 focusedLink"
+                            href="{{ sub_link.url }}"
+                            aria-label="{{sub_link.title}}"
+                          >
+                            {{- sub_link.title -}}
+                          </a>
+                        </div>
+                      {% endfor %}
+                    {% endif %}
                   </li>
-                  {% assign menu = linklists.sauers%}
-                  {% for link in menu.links %}
-                      <li class=" nav-item  ">
-                        <a href="{{ link.url }}" class="nav-link  focusedLink ">{{ link.title }}</a>
-                        {% if link.links != blank %}
-                         
-                          {% for sub_link in link.links %} 
-                            <div>
-                              <a role="menuitem" class="nav-link  px-2 focusedLink" href="{{ sub_link.url }}" aria-label="{{sub_link.title}}">{{ sub_link.title }}</a>
-                            </div>
-                          {% endfor %}
-                       
-                     
-                        {% endif %}
-                        
-                      </li>
-                  {% endfor %}
-                </div>
-                <div class="row text-center my-2">
-                    <div class="col-4 text-center">
-                  <a href="/search" style="color: black"> {% render 'icon-search'%} </a>
-                    </div>
-                    <div class="col-4 text-center">
-                   <a href="/account"  style="color: black"> {% render 'icon-account'%} </a>
+                {% endfor %}
+              </div>
+              <div class="row text-center my-2">
+                <div class="col-4 text-center">
+                  <a href="/search" style="color: black"> {% render 'icon-search' %} </a>
                 </div>
                 <div class="col-4 text-center">
-                    <a href="/cart"  style="color: black">{% render 'icon-shoppingbag'%}</a>
+                  <a href="/account" style="color: black"> {% render 'icon-account' %} </a>
                 </div>
-                  </div>
-                <div class="row my-3">
-                  <h5 class="text-center">
-                      Our Other Brands
-                  </h5>
-                  <div class="col-6 py-3">
-                    <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                        width="" height=""
-                        alt="The Spice Hunter Logo"
-                        class="mobileLogoMenu"
-                        loading="lazy"></a>
-                      
-                      
-      
-                     
-      
-                  </div>
-                  <div class="col-6">
-                    <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                        width="" height=""
-                        alt="Kernel Season's Logo"
-                        class="ksMobileMenuSide"
-                        loading="lazy"></a>
-                  </div>
-                  
+                <div class="col-4 text-center">
+                  <a href="/cart" style="color: black">{% render 'icon-shoppingbag' %}</a>
+                </div>
               </div>
-               
-              </ul>
-           
-            </div>
+              <div class="row my-3">
+                <h5 class="text-center">Our Other Brands</h5>
+                <div class="col-6 py-3">
+                  <a href="/pages/spicehuntertest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                      width=""
+                      height=""
+                      alt="The Spice Hunter Logo"
+                      class="mobileLogoMenu"
+                      loading="lazy"
+                  ></a>
+                </div>
+                <div class="col-6">
+                  <a href="/pages/kernelseasonstest"
+                    ><img
+                      src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                      width=""
+                      height=""
+                      alt="Kernel Season's Logo"
+                      class="ksMobileMenuSide"
+                      loading="lazy"
+                  ></a>
+                </div>
+              </div>
+            </ul>
           </div>
-          
         </div>
-      </nav>
-{% endif %}
-  </div>
-
-
-
-
-
-
+      </div>
+    </nav>
+  {% endif %}
+</div>
 
 {% comment %} Desktop Header {% endcomment %}
 <header class="header-div d-none d-lg-block">
+  {% if canonical_url contains 'kernel' %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <div class="tab">
+            <a href="/pages/kernelseasonstest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                width=""
+                height=""
+                alt="Kernel Season's Logo"
+                class="brandKernelLogos-Header"
+                loading="lazy"
+            ></a>
+            <a href="/"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                width=""
+                height=""
+                alt="Sauer's Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
 
-           {% if canonical_url contains 'kernel' %}
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="tab">
-                            <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                                width="" height=""
-                                alt="Kernel Season's Logo"
-                                class="brandKernelLogos-Header"
-                                loading="lazy"></a>
-                            <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                            width="" height=""
-                            alt="Sauer's Logo"
-                            class="brandSpiceLogos-Header"
-                            loading="lazy"></a>
-                        
-
-                         <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                                width="" height=""
-                                alt="The Spice Hunter Logo"
-                                class="brandSpiceLogos-Header"
-                                loading="lazy"></a>
-                    </div> </div>
-             
-            <div class="col-6">
-                <div class="topDivHeader d-none d-md-block">
-
-                    <nav class="nav_bar_class fixed-top"  >
-                                <div class="container-fluid">
-                                    <div class=" row py-md-4 ">
-                                        {% assign menu = linklists.kernel%}
-                                        {% for link in menu.links %}
-                                        <div class=" col-3 text-center">
-                                            <div class="drpdwn  ">
-                                                <a href="{{link.url}}"class="drpbtn kernelMenu{% if link.active == true%} activeMenuLink {% endif %}"> {{ link.title }}</a>
-                                                {% if link.links != blank %}
-                                                     <div class="drp-wrpper">
-                                                        <div class="drpdwn-cntnt">
-                                                            {% for child_link in link.links %}
-                                                    
-                                                            <a role="menuitem" class="text-start {% if link.active == true%} activeMenuLink {% endif %}" href="{{ child_link.url }}" aria-label="{{child_link.title}}">{{ child_link.title }}</a>
-                                                           
-                                                        {% endfor %}
-                                             
-                                                        </div>
-                                                    </div>
-                                                {% endif %}
-                                            </div> 
-                                        </div>
-                                        {% endfor%}
-                                    </div></div>
-                            </nav>
-                        </div>
-                          
-            </div>
-
-            <div class="col-3">
-               <a href="/search"> {% render 'icon-search'%} </a>
-               <a href="/account"> {% render 'icon-account'%} </a>
-                <a href="/cart">{% render 'icon-shoppingbag'%}</a>
-            </div>
-    
+            <a href="/pages/spicehuntertest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                width=""
+                height=""
+                alt="The Spice Hunter Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+          </div>
         </div>
-    </div>
-           {% elsif canonical_url contains 'spicehunter' %}
-           <div class="container-fluid">
-            <div class="row">
-                <div class="col-3">
-                    <div class="tab">
-                        <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                            width="" height=""
-                            alt="The Spice Hunter Logo"
-                            class="brandSpiceLogos-Header"
-                            loading="lazy"></a>
-                        <a href="/"><img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                        width="" height=""
-                        alt="Sauer's Logo"
-                        class="brandSpiceLogos-Header"
-                        loading="lazy"></a>
-                    
-                   <a href="/pages/kernelseasonstest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                        width="" height=""
-                        alt="Kernel Season's Logo"
-                        class="brandKernelLogos-Header"
-                        loading="lazy"></a>
-                 
-                </div> </div>
-         
-                <div class="col-6">
-                    <div class="topDivHeader d-none d-md-block">
 
-                        <nav class="nav_bar_class fixed-top"  >
-                                    <div class="container-fluid">
-                                        <div class=" row py-md-4 ">
-                                            {% assign menu = linklists.spicehunter%}
-                                            {% for link in menu.links %}
-                                            <div class=" col-3 text-center">
-                                                <div class="drpdwn  ">
-                                                    <a href="{{link.url}}"class="drpbtn spicehunterMenu{% if link.active == true%} activeMenuLink {% endif %}"> {{ link.title }}</a>
-                                                    {% if link.links != blank %}
-                                                         <div class="drp-wrpper">
-                                                            <div class="drpdwn-cntnt">
-                                                                {% for child_link in link.links %}
-                                                        
-                                                                <a role="menuitem" class="text-start {% if link.active == true%} activeMenuLink {% endif %}" href="{{ child_link.url }}" aria-label="{{child_link.title}}">{{ child_link.title }}</a>
-                                                               
-                                                            {% endfor %}
-                                                 
-                                                            </div>
-                                                        </div>
-                                                    {% endif %}
-                                                </div> 
-                                            </div>
-                                            {% endfor%}
-                                        </div></div>
-                                </nav>
+        <div class="col-6">
+          <div class="topDivHeader d-none d-md-block">
+            <nav class="nav_bar_class fixed-top">
+              <div class="container-fluid">
+                <div class=" row py-md-4 ">
+                  {% assign menu = linklists.kernel %}
+                  {% for link in menu.links %}
+                    <div class=" col-3 text-center">
+                      <div class="drpdwn  ">
+                        <a
+                          href="{{link.url}}"
+                          class="drpbtn kernelMenu{% if link.active == true%} activeMenuLink {% endif %}"
+                        >
+                          {{ link.title -}}
+                        </a>
+                        {% if link.links != blank %}
+                          <div class="drp-wrpper">
+                            <div class="drpdwn-cntnt">
+                              {% for child_link in link.links %}
+                                <a
+                                  role="menuitem"
+                                  class="text-start {% if link.active == true%} activeMenuLink {% endif %}"
+                                  href="{{ child_link.url }}"
+                                  aria-label="{{child_link.title}}"
+                                >
+                                  {{- child_link.title -}}
+                                </a>
+                              {% endfor %}
                             </div>
-                              
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </nav>
+          </div>
         </div>
 
         <div class="col-3">
-           <a href="/search"> {% render 'icon-search'%} </a>
-           <a href="/account"> {% render 'icon-account'%} </a>
-            <a href="/cart">{% render 'icon-shoppingbag'%}</a>
+          <a href="/search"> {% render 'icon-search' %} </a>
+          <a href="/account"> {% render 'icon-account' %} </a>
+          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
         </div>
-
+      </div>
     </div>
-</div>
-{% elsif canonical_url contains 'search' %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <div class="tab">
-                <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                    width="" height=""
-                    alt="The Spice Hunter Logo"
-                    class="brandSpiceLogos-Header"
-                    loading="lazy"></a>
-                <a href="/"> <img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                width="" height=""
+  {% elsif canonical_url contains 'spicehunter' %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <div class="tab">
+            <a href="/pages/spicehuntertest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                width=""
+                height=""
+                alt="The Spice Hunter Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+            <a href="/"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                width=""
+                height=""
                 alt="Sauer's Logo"
                 class="brandSpiceLogos-Header"
-                loading="lazy"></a>
-            
-           <a href="/pages/kernelseasonstest"> <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                width="" height=""
+                loading="lazy"
+            ></a>
+
+            <a href="/pages/kernelseasonstest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                width=""
+                height=""
                 alt="Kernel Season's Logo"
                 class="brandKernelLogos-Header"
-                loading="lazy"></a>
-         
-        </div> </div>
- 
-
-
-<div class="col-4">
-   <a href="/search"> {% render 'icon-search'%} </a>
-   <a href="/account"> {% render 'icon-account'%} </a>
-    <a href="/cart">{% render 'icon-shoppingbag'%}</a>
-</div>
-
-</div>
-</div>
-    {% elsif canonical_url contains 'cart' %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <div class="tab">
-                    <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                        width="" height=""
-                        alt="The Spice Hunter Logo"
-                        class="brandSpiceLogos-Header"
-                        loading="lazy"></a>
-                    <a href="/"> <img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                    width="" height=""
-                    alt="Sauer's Logo"
-                    class="brandSpiceLogos-Header"
-                    loading="lazy"></a>
-                
-               <a href="/pages/kernelseasonstest"> <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                    width="" height=""
-                    alt="Kernel Season's Logo"
-                    class="brandKernelLogos-Header"
-                    loading="lazy"></a>
-             
-            </div> </div>
-     
-
-
-    <div class="col-4">
-       <a href="/search"> {% render 'icon-search'%} </a>
-       <a href="/account"> {% render 'icon-account'%} </a>
-        <a href="/cart">{% render 'icon-shoppingbag'%}</a>
-    </div>
-
-</div>
-</div>
-    {% elsif canonical_url contains 'account' %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <div class="tab">
-                    <a href="/pages/spicehuntertest"><img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                        width="" height=""
-                        alt="The Spice Hunter Logo"
-                        class="brandSpiceLogos-Header"
-                        loading="lazy"></a>
-                    <a href="/"> <img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                    width="" height=""
-                    alt="Sauer's Logo"
-                    class="brandSpiceLogos-Header"
-                    loading="lazy"></a>
-                
-               <a href="/pages/kernelseasonstest"> <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                    width="" height=""
-                    alt="Kernel Season's Logo"
-                    class="brandKernelLogos-Header"
-                    loading="lazy"></a>
-             
-            </div> </div>
-     
-
-
-    <div class="col-4">
-       <a href="/search"> {% render 'icon-search'%} </a>
-       <a href="/account"> {% render 'icon-account'%} </a>
-        <a href="/cart">{% render 'icon-shoppingbag'%}</a>
-    </div>
-
-</div>
-</div>
-            {% else %}
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="tab">
-                           
-                                <a href="/">   <img src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                                    width="" height=""
-                                    alt="The Sauers Logo"
-                                    class="brandSpiceLogos-Header"
-                                    loading="lazy"></a>
-                            <a href="/pages/spicehuntertest">   <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                                width="" height=""
-                                alt="The Spice Hunter Logo"
-                                class="brandSpiceLogos-Header"
-                                loading="lazy"></a>
-                     
-                       <a href="/pages/kernelseasonstest"> <img src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                            width="" height=""
-                            alt="Kernel Season's Logo"
-                            class="brandKernelLogos-Header"
-                            loading="lazy"> </a>
-                     
-                    </div> </div>
-             
-                    <div class="col-6">
-                        <div class="topDivHeader d-none d-md-block">
-
-                            <nav class="nav_bar_class fixed-top"  >
-                                        <div class="container-fluid">
-                                            <div class=" row py-md-4 ">
-                                                {% assign menu = linklists.sauers%}
-                                                {% for link in menu.links %}
-                                                <div class=" col-3 text-center">
-                                                    <div class="drpdwn  ">
-                                                        <a href="{{link.url}}"class="drpbtn sauerMenu{% if link.active == true%} activeMenuLink {% endif %}"> {{ link.title }}</a>
-                                                        {% if link.links != blank %}
-                                                             <div class="drp-wrpper">
-                                                                <div class="drpdwn-cntnt">
-                                                                    {% for child_link in link.links %}
-                                                            
-                                                                    <a role="menuitem" class="text-start {% if link.active == true%} activeMenuLink {% endif %}" href="{{ child_link.url }}" aria-label="{{child_link.title}}">{{ child_link.title }}</a>
-                                                                   
-                                                                {% endfor %}
-                                                     
-                                                                </div>
-                                                            </div>
-                                                        {% endif %}
-                                                    </div> 
-                                                </div>
-                                                {% endfor%}
-                                            </div></div>
-                                    </nav>
-                                </div>
-            </div>
-    
-            <div class="col-3">
-               <a href="/search"> {% render 'icon-search'%} </a>
-               <a href="/account"> {% render 'icon-account'%} </a>
-                <a href="/cart">{% render 'icon-shoppingbag'%}</a>
-            </div>
-    
+                loading="lazy"
+            ></a>
+          </div>
         </div>
+
+        <div class="col-6">
+          <div class="topDivHeader d-none d-md-block">
+            <nav class="nav_bar_class fixed-top">
+              <div class="container-fluid">
+                <div class=" row py-md-4 ">
+                  {% assign menu = linklists.spicehunter %}
+                  {% for link in menu.links %}
+                    <div class=" col-3 text-center">
+                      <div class="drpdwn  ">
+                        <a
+                          href="{{link.url}}"
+                          class="drpbtn spicehunterMenu{% if link.active == true%} activeMenuLink {% endif %}"
+                        >
+                          {{ link.title -}}
+                        </a>
+                        {% if link.links != blank %}
+                          <div class="drp-wrpper">
+                            <div class="drpdwn-cntnt">
+                              {% for child_link in link.links %}
+                                <a
+                                  role="menuitem"
+                                  class="text-start {% if link.active == true%} activeMenuLink {% endif %}"
+                                  href="{{ child_link.url }}"
+                                  aria-label="{{child_link.title}}"
+                                >
+                                  {{- child_link.title -}}
+                                </a>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <a href="/search"> {% render 'icon-search' %} </a>
+          <a href="/account"> {% render 'icon-account' %} </a>
+          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
+        </div>
+      </div>
     </div>
-                
-           {% endif %}
+  {% elsif canonical_url contains 'search' %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="tab">
+            <a href="/pages/spicehuntertest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                width=""
+                height=""
+                alt="The Spice Hunter Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+            <a href="/">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                width=""
+                height=""
+                alt="Sauer's Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
 
+            <a href="/pages/kernelseasonstest">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                width=""
+                height=""
+                alt="Kernel Season's Logo"
+                class="brandKernelLogos-Header"
+                loading="lazy"
+            ></a>
+          </div>
+        </div>
 
+        <div class="col-4">
+          <a href="/search"> {% render 'icon-search' %} </a>
+          <a href="/account"> {% render 'icon-account' %} </a>
+          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
+        </div>
+      </div>
+    </div>
+  {% elsif canonical_url contains 'cart' %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="tab">
+            <a href="/pages/spicehuntertest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                width=""
+                height=""
+                alt="The Spice Hunter Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+            <a href="/">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                width=""
+                height=""
+                alt="Sauer's Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+
+            <a href="/pages/kernelseasonstest">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                width=""
+                height=""
+                alt="Kernel Season's Logo"
+                class="brandKernelLogos-Header"
+                loading="lazy"
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <a href="/search"> {% render 'icon-search' %} </a>
+          <a href="/account"> {% render 'icon-account' %} </a>
+          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
+        </div>
+      </div>
+    </div>
+  {% elsif canonical_url contains 'account' %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="tab">
+            <a href="/pages/spicehuntertest"
+              ><img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                width=""
+                height=""
+                alt="The Spice Hunter Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+            <a href="/">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                width=""
+                height=""
+                alt="Sauer's Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+
+            <a href="/pages/kernelseasonstest">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                width=""
+                height=""
+                alt="Kernel Season's Logo"
+                class="brandKernelLogos-Header"
+                loading="lazy"
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <a href="/search"> {% render 'icon-search' %} </a>
+          <a href="/account"> {% render 'icon-account' %} </a>
+          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <div class="tab">
+            <a href="/">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
+                width=""
+                height=""
+                alt="The Sauers Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+            <a href="/pages/spicehuntertest">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
+                width=""
+                height=""
+                alt="The Spice Hunter Logo"
+                class="brandSpiceLogos-Header"
+                loading="lazy"
+            ></a>
+
+            <a href="/pages/kernelseasonstest">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
+                width=""
+                height=""
+                alt="Kernel Season's Logo"
+                class="brandKernelLogos-Header"
+                loading="lazy"
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="topDivHeader d-none d-md-block">
+            <nav class="nav_bar_class fixed-top">
+              <div class="container-fluid">
+                <div class=" row py-md-4 ">
+                  {% assign menu = linklists.sauers %}
+                  {% for link in menu.links %}
+                    <div class=" col-3 text-center">
+                      <div class="drpdwn  ">
+                        <a
+                          href="{{link.url}}"
+                          class="drpbtn sauerMenu{% if link.active == true%} activeMenuLink {% endif %}"
+                        >
+                          {{ link.title -}}
+                        </a>
+                        {% if link.links != blank %}
+                          <div class="drp-wrpper">
+                            <div class="drpdwn-cntnt">
+                              {% for child_link in link.links %}
+                                <a
+                                  role="menuitem"
+                                  class="text-start {% if link.active == true%} activeMenuLink {% endif %}"
+                                  href="{{ child_link.url }}"
+                                  aria-label="{{child_link.title}}"
+                                >
+                                  {{- child_link.title -}}
+                                </a>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <a href="/search"> {% render 'icon-search' %} </a>
+          <a href="/account"> {% render 'icon-account' %} </a>
+          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </header>
-{%style%}
-
-{% endstyle%}
+{% style %}
+{% endstyle %}
