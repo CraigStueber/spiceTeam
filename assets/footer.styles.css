@@ -1,18 +1,90 @@
-.kernelFooter{
-    background-color: #00a9e0;
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #436174;
+    margin: 0px;
+    padding: 40px 0 20px;
+  }
   
-}
-.spicehunterFooter{
-    background-color: #a1c283;
-}
-.sauersFooter{
-    background-color: #4b6174;
-    color: #df7500;
-
-}
-.basicFooter{
-
-    background-color: #3a3a3a;
-    color: #df7500;
-
-}
+  .flex-item-left {
+  
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+  
+    padding: 50px 10px;
+    flex: 50%;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 900px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+  .btn-inline {
+    display: inline-block;
+    width: 20%;
+    margin: 0 10px 30px;
+  }
+  .btn-links{
+    width: 100%;
+    padding: 10px 0 10px;
+    border-radius: 10px;
+    border: 2px #ffffff solid;
+    color: #ffffff;
+  }
+  .btn-links:hover{
+    cursor: pointer;
+    background-color: #436174;
+  }
+  .btn-sauers{
+    background-color: #84ad64;
+  }
+  .btn-kernel{
+    background-color: #00a9e0;
+  }
+  .btn-spicehunter{
+    background-color: #000000;
+  }
+  .btn-truffle{
+    background-color: #ad8d51;
+  }
+  .btn-veggie{
+    background-color: #74af0d;
+  }
+  .btn-tasty{
+    background-color: #153c76;
+  }
+  .footer-link{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footer-link:hover{
+    color: #00a9e0;
+  }
+  .copy-right-div{
+    background-color: #963c13;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: right;
+  }
+  .copy-right-div-text{
+    margin: 0 200px 0;
+    color: #ffffff;
+  }
+   
+  #LinkFooter:hover{
+      color: #00a9e0;
+  }
+  .btn-img{
+    width: 75%;
+  }
+  #sauers-btn{
+    padding: 15px 0;
+  }
+    

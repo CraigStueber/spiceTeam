@@ -1,78 +1,80 @@
 {{ 'footer.styles.css' | asset_url | stylesheet_tag }}
 
-<footer>
-  {% if canonical_url contains 'kernel' %}
-    <div class="kernelFooter">
-      <h1 class="text-center">Kernel Season Footer</h1>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/838377.jpg?v=1690984376 "
-        width=""
-        height=""
-        class=""
-        alt=""
-        loading="lazy"
-      >
+<footer
+  class="site-footer critical-hidden"
+  role="contentinfo"
+  data-section-id="{{ section.id }}"
+  data-section-type="footer-section"
+>
+  <div class="flex-container">
+    <div class="flex-item-left">
+      <div>
+        <div class="btn-inline">
+          <a href="https://sauers.com/"
+            ><button class="btn-links btn-sauers" id="sauers-btn">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/sauer.png?v=1651866759"
+                class="btn-img"
+                width=""
+                height=""
+                loading="lazy"
+              ></button
+          ></a>
+        </div>
+        <div class="btn-inline">
+          <a href="https://sauers.com/pages/kernel"
+            ><button class="btn-links btn-kernel">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/kernel.png?v=1651866750"
+                class="btn-img"
+                width=""
+                height=""
+                loading="lazy"
+              ></button
+          ></a>
+        </div>
+        <div class="btn-inline">
+          <a href="https://sauers.com/pages/spicehunter-1"
+            ><button class="btn-links btn-spicehunter">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/spice.png?v=1651866750https://cdn.shopify.com/s/files/1/0527/2184/4410/files/truffle.png?v=1651866750"
+                class="btn-img"
+                width=""
+                height=""
+                loading="lazy"
+              ></button
+          ></a>
+        </div>
+      </div>
     </div>
-  {% elsif canonical_url contains 'spicehunter' %}
-    <div class="spicehunterFooter">
-      <h1 class="text-center">Spice Hunter Season Footer</h1>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/wp11126765.jpg?v=1690984382 "
-        width=""
-        height=""
-        class=""
-        alt=""
-        loading="lazy"
-      >
+    <div class="flex-item-right">
+      <div>
+        <div class="btn-inline">
+          <a href="https://sauers.com/pages/contact" class="footer-link" id="LinkFooter">Contact Us</a>
+        </div>
+        <div class="btn-inline">
+          <a href="https://sauers.com/pages/faq" class="footer-link" id="LinkFooter">FAQ's</a>
+        </div>
+        <div class="btn-inline">
+          <a href="https://sauerbrandsinc.com/join-the-team/careers/" class="footer-link" id="LinkFooter">Careers</a>
+        </div>
+      </div>
+      <div>
+        <div class="btn-inline">
+          <a href="https://sauers.com/policies/refund-policy" class="footer-link" id="LinkFooter">Refund Policy</a>
+        </div>
+        <div class="btn-inline">
+          <a href="https://sauerbrandsinc.com/privacy-policy/" class="footer-link" id="LinkFooter">Privacy Policy</a>
+        </div>
+        <div class="btn-inline">
+          <a href="https://sauerbrandsinc.com/terms-and-conditions/" class="footer-link" id="LinkFooter"
+            >Terms & Conditions</a
+          >
+        </div>
+      </div>
     </div>
-  {% elsif canonical_url contains 'search' %}
-    <div class="basicFooter">
-      <h1 class="text-center">Footer coming from Search</h1>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
-        width=""
-        height=""
-        class=""
-        alt=""
-        loading="lazy"
-      >
-    </div>
-  {% elsif canonical_url contains 'account' %}
-    <div class="basicFooter">
-      <h1 class="text-center">Footer coming from Account</h1>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
-        width=""
-        height=""
-        class=""
-        alt=""
-        loading="lazy"
-      >
-    </div>
-  {% elsif canonical_url contains 'cart' %}
-    <div class="basicFooter">
-      <h1 class="text-center">Footer coming from Cart</h1>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/main-qimg-331599e76f0cdf210e4187822172942a.webp?v=1690984371 "
-        width=""
-        height=""
-        class=""
-        alt=""
-        loading="lazy"
-      >
-    </div>
-
-  {% else %}
-    <div class="sauersFooter">
-      <h1 class="text-center">Sauers Footer</h1>
-      <img
-        src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/2-22-11-6-7-17-29m.jpg?v=1690984387 "
-        width=""
-        height=""
-        class=""
-        alt=""
-        loading="lazy"
-      >
-    </div>
-  {% endif %}
+  </div>
+  <div class="copy-right-div">
+    <p class="copy-right-div-text" style="color: #ffffff;">&copy; 2022, Sauer Brands</p>
+  </div>
 </footer>
