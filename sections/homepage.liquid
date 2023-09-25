@@ -1,6 +1,118 @@
-<div class="homepage">
+{{ 'homepage.styles.css' | asset_url | stylesheet_tag }}
 
-<h1> Sauers Home Page </h1>
+<div class="homepage p-0">
+  {% comment %} Hero {% endcomment %}
+  <div class="d-none d-lg-block">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/SauersBanner_copy.jpg?v=1695664591"
+      width=""
+      height=""
+      class="webSauersHero"
+      loading="lazy"
+    >
+  </div>
+  <div class="d-block d-lg-none">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/WebSauersBanner.jpg?v=1695664586"
+      width=""
+      height=""
+      class="MobileSauersHero"
+      loading="lazy"
+    >
+  </div>
+  {% comment %} About Brand {% endcomment %}
+  <div class="container-fluid d-none d-md-block p-0">
+    <div class="row ">
+      <div class="col-md-4">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/sauer-brands-peppercorn.jpg?v=1695665278"
+          width=""
+          height=""
+          class="MobileSauersHero"
+          loading="lazy"
+        >
+      </div>
+      <div class="col-md-8 text-center p-3">
+        <h2>Our Story</h2>
+        <h3>A commitment to exceptional quality since 1887</h3>
+        <p>
+          From the pure-flavoring extracts first introduced by Conrad Frederick Sauer in the 19th century at CF Sauer
+          Products to the branded and private label spices, mixes, sauces and more that define our brand today, Sauer
+          Brands, Inc. continues to innovate and grow. We source globally and then conceive and produce our quality
+          products right here in the USA.
+        </p>
 
+        <p>
+          Headquartered in Richmond, Virginia, and led by a team of operational and customer development experts, we
+          have the facilities, the know-how, and the support you need to grow your business. We are not an ‘on the side’
+          kind of vendor. We seek to infuse our culture and capabilities with yours and do amazing things, together.
+        </p>
+        <p>About Us</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid d-block d-md-none p-0">
+    <div class="row">
+      <div class="col-12 text-center p-3">
+        <h2>Our Story</h2>
+        <h3>A commitment to exceptional quality since 1887</h3>
+        <p>
+          From the pure-flavoring extracts first introduced by Conrad Frederick Sauer in the 19th century at CF Sauer
+          Products to the branded and private label spices, mixes, sauces and more that define our brand today, Sauer
+          Brands, Inc. continues to innovate and grow. We source globally and then conceive and produce our quality
+          products right here in the USA.
+        </p>
 
+        <p>
+          Headquartered in Richmond, Virginia, and led by a team of operational and customer development experts, we
+          have the facilities, the know-how, and the support you need to grow your business. We are not an ‘on the side’
+          kind of vendor. We seek to infuse our culture and capabilities with yours and do amazing things, together.
+        </p>
+        <p>About Us</p>
+      </div>
+      <div class="col-12">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/sauer-brands-peppercorn.jpg?v=1695665278"
+          width=""
+          height=""
+          class="MobileSauersHero"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+  {% comment %} Product Line {% endcomment %}
+  <div class="container-fluid p-2">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h2>Traditional SPICES</h2>
+        <h3>Our rock-solid line of spices.</h3>
+        <p>All the standard spices you want and need. All the taste and value you expect from us.</p>
+        <p>Products</p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/pexels-vinicius-caricatte-6245955.jpg?v=1695666119"
+          width=""
+          height=""
+          class="MobileSauersHero"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+  {% comment %} Where to Buy {% endcomment %}
+  <div class="text-center whereToBuyDiv">
+    <h1>Where To Buy</h1>
+    <h2>Find grocery and specialty stores that carry Sauer’s products.</h2>
+    <p>Find Where</p>
+  </div>
+  {% comment %} Recipes {% endcomment %}
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4">Recipe 1</div>
+      <div class="col-md-4">Recipe 2</div>
+      <div class="col-md-4">Recipe 3</div>
+    </div>
+  </div>
 </div>
