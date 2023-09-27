@@ -1,0 +1,37 @@
+.headerAboutUs {
+  font-size: 3em;
+  font-weight: 800;
+}
+.aboutUsInfoImg {
+  width: 500px;
+  border-radius: 10px;
+}
+.infoSec {
+  padding: 50px 20px 50px;
+  border-radius: 10px;
+}
+.sect1 {
+    background-color: #963c13;
+}
+.sect2 {
+    background-color: #ad8c52;
+}
+.sect3 {
+    background-color: #4b6174;
+}
+.quoteDiv{
+    background-color: #a1c283;
+    padding: 50px 0 50px;
+}
+.quoteText{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+.textSec{
+    color: white;
+    text-align: center;
+    padding: 100px 50px 10px;
+    font-size: 1.2em;
+}

@@ -1,4 +1,86 @@
-<h1>Header</h1>
-<h1>Quote Div</h1>
+{{ 'sauers.styles.css' | asset_url | stylesheet_tag }}
 
-<h1>Info Div</h1>
+{% comment %} Header {% endcomment %}
+<div class="d-none d-lg-block">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/webBannerAboutUs.jpg?v=1695821113"
+    width=""
+    height=""
+    class="webSauersHero"
+    loading="lazy"
+  >
+</div>
+<div class="d-block d-lg-none">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/mobileAboutUs.jpg?v=1695821106"
+    width=""
+    height=""
+    class="MobileSauersHero"
+    loading="lazy"
+  >
+</div>
+{% comment %} Quote {% endcomment %}
+<div class="text-center">
+  <h1 class="headerAboutUs">About Us</h1>
+</div>
+{% comment %} info {% endcomment %}
+<div class="container my-3">
+  <div class="row infoSec sect1">
+    <div class="col-md-6">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/download_11.webp?v=1695823556"
+        width=""
+        height=""
+        class="aboutUsInfoImg"
+        loading="lazy"
+      >
+    </div>
+    <div class="col-md-6 textSec">
+      <p>
+        Born in 1887. Sauer’s was the first company to make pure flavoring extracts available to home cooks in grocery
+        stores.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container my-3">
+  <div class="row infoSec sect2">
+    <div class="col-md-6">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/download_12.webp?v=1695823556"
+        width=""
+        height=""
+        class="aboutUsInfoImg"
+        loading="lazy"
+      >
+    </div>
+    <div class="col-md-6 textSec">
+      <p>By 1927, Sauer’s grew to be the largest producer of extracts and spices in the nation.</p>
+    </div>
+  </div>
+</div>
+<div class="container my-3">
+  <div class="row infoSec sect3">
+    <div class="col-md-6">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/download_13.webp?v=1695823557"
+        width=""
+        height=""
+        class="aboutUsInfoImg"
+        loading="lazy"
+      >
+    </div>
+    <div class="col-md-6 textSec">
+      <p>Vintage advertising includes award-winning displays, a live radio show, and print.</p>
+    </div>
+  </div>
+</div>
+
+{% comment %} Browse Products {% endcomment %}
+
+<div class="container-fluid quoteDiv">
+  <p class="quoteText">
+    “Sauer’s empowers home cooks to create lasting memories in the kitchen using 130 years of flavor expertise tailored
+    to fit the modern lifestyle”
+  </p>
+</div>
