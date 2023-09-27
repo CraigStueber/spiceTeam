@@ -1,3 +1,107 @@
+h2{
+    font-size: 3em;
+    font-weight: 700;
+}
+h3{
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+
+
 .webSauersHero{
     width: 100%;
+}
+.ourStoryTextSec{
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+.mobileStoryImg{
+    display: block;
+    margin: 0 auto 0;
+    width: 75%;
+}
+.aboutUsBtn{
+    background-color: #df7500;
+    padding: 10px 30px 10px;
+    width: 30%;
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 10px;
+    color: white;  font-weight: 700;
+}
+.aboutUsBtn:hover{
+    background-color:#b15c02;
+}
+.productLineSec{
+    padding: 20px 30px 15px;
+    background-color: #ad8c52;
+}
+.prodLineTextSec{
+    color: white;
+    padding: 100px 20px 0px;
+}
+.productLineBtn{
+    background-color: #4b6174;
+    color: white;
+    padding: 10px 30px 10px;
+    width: 300px;
+    margin: 20px auto 0;
+    border-radius: 10px;  font-weight: 700;
+}
+.productLineBtn:hover{
+    background-color: #3a3a3a;
+}
+
+.prodLineImg{
+    border-radius: 5px;
+}
+.whereToBuyDiv{
+    background-color: #963c13;
+    color: white;
+    padding: 100px 0 100px;
+}
+.wtbBtn{
+    background-color: white;
+    padding: 10px 30px 10px;
+    width: 300px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+}
+.wtbBtn:hover{
+    background-color: #a4a8ac;
+    color: white;
+}
+.recipeSec{
+    background-color: #df7500;
+}
+.recipeCard{
+    background-color: white;
+    padding: 10px 0px 20px;
+    border-radius: 10px;
+}
+.recipeImg{
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.recipeTitle{
+    font-weight: 800;
+}
+.recipeBtn{
+    background-color: #74af0d;
+    width: 200px;
+    color: white;
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+}
+.recipeBtn:hover{
+    background-color: #4e750a;
 }
