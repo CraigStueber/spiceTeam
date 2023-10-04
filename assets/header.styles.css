@@ -1,117 +1,116 @@
-.header-icons{
-    width: 30px;
-    float: right;
-    margin: 0 10px 0;
-    padding: 30px 0 0;
+.header-icons {
+  width: 30px;
+  float: right;
+  margin: 0 10px 0;
+  padding: 30px 0 0;
 }
-.header-icons:hover{
-    color: red;
-    cursor: pointer;
+.header-icons:hover {
+  color: red;
+  cursor: pointer;
 }
-.header-div{
-    padding: 10px 20px 10px;
-    width: 95%;
+.header-div {
+  padding: 10px 20px 10px;
 }
-.brandSpiceLogos-Header{
-   width: 25%;
-   margin: 0 10px 0;
+.brandSpiceLogos-Header {
+  width: 25%;
+  margin: 0 10px 0;
 }
-.brandKernelLogos-Header{
-    width: 22%;
-    margin: 0 10px 0;
+.brandKernelLogos-Header {
+  width: 22%;
+  margin: 0 10px 0;
 }
-.HeaderTD{
-    width: 50%;
-  }
-  .topDivHeader{
-    height: 65px;
-  
-  }
-  .navLinks{
-      display: inline-block;
-   }
-  
-  
-   .nav_bar_class{
-    height: 84px;
-    position: relative;
- 
-   }
-  
-  .navImgLogo{
+.HeaderTD {
+  width: 50%;
+}
+.topDivHeader {
+  height: 65px;
+}
+.navLinks {
+  display: inline-block;
+}
+
+.nav_bar_class {
+  height: 84px;
+  position: relative;
+}
+
+.navImgLogo {
   display: block;
   margin: 0 auto 0;
-  }
-  
-  
-    .activeMenuLink{
-      color: black
-    }
-    .hamburger{
-      color: white;
-    }
-    .mob-nav-bar-ks{
-      background-color: #00a9e0;
-      color: white;
-    }
-  .drpdwn{
-    position: relative;
-    display: inline-block;
-  }
-  .drpbtn{
-    position: relative;
-    text-align: center; 
-    text-decoration: none;
-  
-    font-size: 1.2em;
-    font-weight: 600;
-   
-  }
-  .drp-wrpper{
-    padding: 10px 0 10px;
-  }
-  .drpdwn-cntnt{
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 10px;
-    padding: 10px 0 10px;
-    
-  }
-  .grandchildDiv{
-  
-  }
-  .drpdwn-cntnt a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  .drpdwn-cntnt a:hover{
-    background-color: #ddd;
-   
-  }
-  .drpdwn:hover .drpdwn-cntnt {
-    display: block;
-  }
-  .drpdwn:hover .drpbtn {
-  
-  }
-  .focusedLink:focus{
-    color: #ffc82c !important;
-  }
-.kernelMenu{
-    color: #00a9e0;
-    font-weight: 800;
 }
-.spicehunterMenu{
-    color: #a1c283;
-    font-weight: 700;
+
+.activeMenuLink {
+  color: black;
 }
-.sauerMenu{
-    color: #963c13;
-    font-weight: 900;
+.hamburger {
+  color: white;
+}
+.mob-nav-bar-ks {
+  background-color: #00a9e0;
+  color: white;
+}
+.drpdwn {
+  position: relative;
+  display: inline-block;
+}
+.drpbtn {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.drp-wrpper {
+  padding: 10px 0 10px;
+}
+.drpdwn-cntnt {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  padding: 10px 0 10px;
+}
+.grandchildDiv {
+}
+.drpdwn-cntnt a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.drpdwn-cntnt a:hover {
+  background-color: #ddd;
+}
+.drpdwn:hover .drpdwn-cntnt {
+  display: block;
+}
+.drpdwn:hover .drpbtn {
+}
+.focusedLink:focus {
+  color: #ffc82c !important;
+}
+.kernelMenu {
+  color: #ffffff;
+  font-weight: 800;
+}
+.spicehunterMenu {
+  color: #ffffff;
+  font-weight: 700;
+}
+.sauerMenu {
+  color: #ffffff;
+  font-weight: 900;
+}
+.kernelHeaderBanner {
+  background-color: #00a9e0;
+}
+.spicehunterHeaderBanner {
+  background-color: #a1c283;
+}
+.sauersHeaderBanner {
+  background-color: #963c13;
 }

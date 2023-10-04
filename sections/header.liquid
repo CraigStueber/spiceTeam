@@ -531,9 +531,9 @@
 </div>
 
 {% comment %} Desktop Header {% endcomment %}
-<header class="header-div d-none d-lg-block">
+<header class="header-div d-none d-lg-block p-0">
   {% if canonical_url contains 'kernel' %}
-    <div class="container-fluid">
+    <div class="container-fluid kernelHeaderBanner">
       <div class="row">
         <div class="col-3">
           <div class="tab">
@@ -610,19 +610,20 @@
       </div>
     </div>
   {% elsif canonical_url contains 'spicehunter' %}
-    <div class="container-fluid">
+    <div class="container-fluid spicehunterHeaderBanner">
       <div class="row">
-        <div class="col-3">
-          <div class="tab">
+        <div class="col-3 ">
+          <div class="tab ">
             <a href="/pages/spicehuntertest"
               ><img
                 src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
                 width=""
                 height=""
                 alt="The Spice Hunter Logo"
-                class="brandSpiceLogos-Header"
+                class="brandSpiceLogos-Header shLogoHeader"
                 loading="lazy"
             ></a>
+
             <a href="/"
               ><img
                 src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
@@ -686,134 +687,9 @@
         </div>
       </div>
     </div>
-  {% elsif canonical_url contains 'search' %}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-          <div class="tab">
-            <a href="/pages/spicehuntertest"
-              ><img
-                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                width=""
-                height=""
-                alt="The Spice Hunter Logo"
-                class="brandSpiceLogos-Header"
-                loading="lazy"
-            ></a>
-            <a href="/">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                width=""
-                height=""
-                alt="Sauer's Logo"
-                class="brandSpiceLogos-Header"
-                loading="lazy"
-            ></a>
 
-            <a href="/pages/kernelseasonstest">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                width=""
-                height=""
-                alt="Kernel Season's Logo"
-                class="brandKernelLogos-Header"
-                loading="lazy"
-            ></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  {% elsif canonical_url contains 'cart' %}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-          <div class="tab">
-            <a href="/pages/spicehuntertest"
-              ><img
-                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                width=""
-                height=""
-                alt="The Spice Hunter Logo"
-                class="brandSpiceLogos-Header"
-                loading="lazy"
-            ></a>
-            <a href="/">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                width=""
-                height=""
-                alt="Sauer's Logo"
-                class="brandSpiceLogos-Header"
-                loading="lazy"
-            ></a>
-
-            <a href="/pages/kernelseasonstest">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                width=""
-                height=""
-                alt="Kernel Season's Logo"
-                class="brandKernelLogos-Header"
-                loading="lazy"
-            ></a>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <a href="/search"> {% render 'icon-search' %} </a>
-          <a href="/account"> {% render 'icon-account' %} </a>
-          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
-        </div>
-      </div>
-    </div>
-  {% elsif canonical_url contains 'account' %}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-          <div class="tab">
-            <a href="/pages/spicehuntertest"
-              ><img
-                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Spice-Hunter-Logo.png?v=1690300276"
-                width=""
-                height=""
-                alt="The Spice Hunter Logo"
-                class="brandSpiceLogos-Header"
-                loading="lazy"
-            ></a>
-            <a href="/">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Sauer_s_Logo_PNG.png?v=1690807674"
-                width=""
-                height=""
-                alt="Sauer's Logo"
-                class="brandSpiceLogos-Header"
-                loading="lazy"
-            ></a>
-
-            <a href="/pages/kernelseasonstest">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0795/2924/7035/files/Kernel_Seasons_-_New_Logo_5fc937bf-a111-4f1d-9d34-0888145183b2.png?v=1690300264"
-                width=""
-                height=""
-                alt="Kernel Season's Logo"
-                class="brandKernelLogos-Header"
-                loading="lazy"
-            ></a>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <a href="/search"> {% render 'icon-search' %} </a>
-          <a href="/account"> {% render 'icon-account' %} </a>
-          <a href="/cart">{% render 'icon-shoppingbag' %}</a>
-        </div>
-      </div>
-    </div>
   {% else %}
-    <div class="container-fluid">
+    <div class="container-fluid sauersHeaderBanner">
       <div class="row">
         <div class="col-3">
           <div class="tab">

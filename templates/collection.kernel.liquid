@@ -1,0 +1,36 @@
+{{ 'collectionKS.styles.css' | asset_url | stylesheet_tag }}
+
+{% paginate collection.products by 12 %}
+  <div class="collectionHeroBanner">
+    <h1>{{ collection.title }}</h1>
+  </div>
+  <div class="collectionContainer">
+    <div class="container">
+      <div class="row">
+        {% for product in collection.products %}
+          <div class="col-12 col-md-6 col-lg-4 text-center">
+            <a href="{{ product.url | within: collection }}">
+              <img
+                src="{{ product.featured_image.src | img_url: 'large' }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                loading="lazy"
+                width=""
+                height=""
+              >
+            </a>
+            <a href="{{ product.url | within: collection }}" style="text-decoration: none;" class="productTitle">
+              {{- product.title -}}
+            </a>
+          </div>
+        {% else %}
+          <p>no matches</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="text-center pageinationStyles">
+    {% if paginate.pages > 1 %}
+      {{ paginate | default_pagination }}
+    {% endif %}
+  </div>
+{% endpaginate %}

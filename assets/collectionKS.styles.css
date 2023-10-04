@@ -1,0 +1,24 @@
+.pageinationStyles {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 30px;
+}
+.productTitle {
+  font-size: 1.5em;
+  color: #162950;
+  font-weight: 800;
+}
+.collectionHeroBanner {
+  background-image: url("https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Newsletter.jpg?v=1696434048");
+  padding: 100px 0 100px;
+}
+.collectionHeroBanner h1 {
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-size: 4em;
+}
+.collectionContainer {
+  margin: 30px 0 80px;
+}
