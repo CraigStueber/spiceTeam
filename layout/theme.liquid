@@ -24,6 +24,34 @@
       crossorigin="anonymous"
       async
     ></script>
+    {% if settings.share_card %}
+      <meta property="og:image" content="http:{{ settings.share_card | img_url: '1200x1200' }}">
+      <meta property="og:image:secure_url" content="https:{{ settings.share_card | img_url: '1200x1200' }}">
+    {% endif %}
+
+    {% if template.name == 'product' %}
+      {% if product.media.size > 0 %}
+        {% for media in product.media limit: 3 -%}
+          <meta property="og:image" content="http:{{ media | img_url: '1200x1200' }}">
+        {% endfor -%}
+
+        {% for media in product.media limit: 3 -%}
+          <meta property="og:image:secure_url" content="https:{{ media | img_url: '1200x1200' }}">
+        {% endfor -%}
+      {% endif %}
+
+    {% elsif template.name == 'article' %}
+      {% if article.image %}
+        <meta property="og:image" content="http:{{ article.image | img_url: '1200x1200' }}">
+        <meta property="og:image:secure_url" content="https:{{ article.image | img_url: '1200x1200' }}">
+      {% endif %}
+
+    {% elsif template.name == 'collection' %}
+      {% if collection.image %}
+        <meta property="og:image" content="http:{{ collection.image | img_url: '1200x1200' }}">
+        <meta property="og:image:secure_url" content="https:{{ collection.image | img_url: '1200x1200' }}">
+      {% endif %}
+    {% endif %}
   </head>
   <body class="body-whole-app">
     {% section 'header' %}
