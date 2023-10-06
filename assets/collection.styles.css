@@ -1,21 +1,21 @@
-.pageinationStyles{
-    font-size: 1.5em;
-    font-weight: 700;
-    color: black;
-    margin-bottom: 30px;
+.pageinationStyles {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 30px;
 }
-.productTitle{
-    font-size: 1.5em;
-    color: black;
-    font-weight: 700;
+.productTitle {
+  font-size: 1.5em;
+  color: black;
+  font-weight: 700;
 }
-.collectionHeroBanner{
-    text-align: center;
-    background-color: #00a9e0;
-    color: #162950;
-    height: 100px;
-    padding-top: 20px;
+.collectionHeroBanner {
+  text-align: center;
+  background-color: #4b6174;
+  color: #ffffff;
+  height: 100px;
+  padding-top: 20px;
 }
-.collectionContainer{
-    margin: 30px 0 80px;
+.collectionContainer {
+  margin: 30px 0 80px;
 }

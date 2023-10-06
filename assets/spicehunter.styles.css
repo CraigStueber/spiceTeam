@@ -1,6 +1,76 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+h1 {
+  font-weight: 900;
+  font-size: 5em;
+}
+
 .shBTN {
 }
+
 .shBTN:hover {
   filter: brightness(85%);
   cursor: pointer;
+}
+
+.prodImg {
+  width: 75%;
+  display: block;
+  margin: 0 auto 0;
+}
+.productSubTitle {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.productTitle {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 0.6;
+}
+.productBtn {
+  border-radius: 20px;
+  border: black solid 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.3em;
+  box-shadow: 4px 3px 5px -3px rgba(0, 0, 0, 0.75);
+}
+.productBtn:hover {
+  box-shadow: 5px 4px 6px -2px rgba(0, 0, 0, 1);
+}
+.pizzaImg {
+  width: 100vw;
+}
+.recipeImg {
+  width: 75%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 0;
+}
+.greenBtn {
+  background-color: #a1c283;
+  border-radius: 30px;
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  width: 40%;
+  margin: 30px auto 50px;
+}
+.greenBtn:hover {
+  cursor: pointer;
+  background-color: #91af76;
+}
+.spicehunterLogoDiv {
+  background-image: url("https://cdn.shopify.com/s/files/1/0527/2184/4410/files/Pre-Footer-Background.png?v=1696596572");
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0 50px;
+}
+.spicehunterImg {
+  width: 70%;
+  display: block;
+  margin: 0 auto 0;
 }
